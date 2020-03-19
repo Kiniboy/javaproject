@@ -29,7 +29,7 @@ public class UserController {
     }
 
     // GET User BY ID
-    @RequestMapping("{/id}")
+    @RequestMapping("/{id}")
     public User getUserById(@PathVariable("id") Long id) {
 
         return this.usersService.getUserById(id);
@@ -40,16 +40,23 @@ public class UserController {
     public ResponseEntity<User> postUser(@RequestBody User u) {
         return new ResponseEntity<User>(this.usersService.saveUser(u), HttpStatus.CREATED);
     }
-    //PUT /users
+
+    //PUT User
     @PutMapping("")
-    public User putUser(@RequestBody User u) {
-        return null;
+    public ResponseEntity<User> saveUser(@RequestBody User u) {
+        return new ResponseEntity<User>(this.usersService.saveUser(u), HttpStatus.OK);
     }
 
-    //DELETE /users
-    @DeleteMapping("/id")
-    public String deleteUserById(@PathVariable Long id) {
+    /*//PUT /users
+    @PutMapping("/{id}/edit")
+    public User putUser(@RequestBody User u) {
+        return null;
+    }*/
+
+    // GET User BY ID
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteUserById(@PathVariable("id") Long id) {
         this.usersService.deleteUserById(id);
-        return ("deleted");
+        return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
     }
 }

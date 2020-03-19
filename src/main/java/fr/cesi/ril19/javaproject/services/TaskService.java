@@ -13,18 +13,8 @@ public class TaskService {
     TaskRepository tr;
 
     TaskService(TaskRepository tr) {
+
         this.tr = tr;
     }
-        public List<Task> getTask() {
-            return (List<Task>) this.tr.findAll();
-        }
-        public Task findTaskbyId(Long id) {
-            return this.tr.findById(id).get();
-        }
-        public Task saveProject (Task t) {
-            return this.tr.save(t);
-        }
-        public void deleteTaskById(@PathVariable Long id) {
-            this.tr.deleteById(id);
-        }
+
 }

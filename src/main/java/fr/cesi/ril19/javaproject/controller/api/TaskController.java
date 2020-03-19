@@ -9,11 +9,5 @@ import java.util.List;
 
 @RequestMapping("/task")
 public class TaskController {
-    private TaskService ts;
 
-    // Fonction GET Task
-    public List<Task> getTask() {
-
-        return this.ts.getTask();
-    }
 }

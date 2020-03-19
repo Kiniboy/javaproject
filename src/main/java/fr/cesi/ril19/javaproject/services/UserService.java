@@ -25,11 +25,14 @@ public class UserService {
     public User getUserById(Long id) {
         return this.usersRepo.findById(id).get();
     }
+
     public User saveUser(User u) {
 
         return this.usersRepo.save(u);
     }
+
     public void deleteUserById(@PathVariable Long id) {
-        this.usersRepo.deleteById(id);
+
+        this.usersRepo.delete(getUserById(id));
     }
 }
