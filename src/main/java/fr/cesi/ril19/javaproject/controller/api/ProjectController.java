@@ -12,7 +12,7 @@ public class ProjectController {
     private ProjectService ps;
 
     // GET Project
-    public List<Project> getProject() {return this.ps.getProject();}
-
-
+    public List<Project> getProject() {
+        return this.ps.getProject();
+    }
 }

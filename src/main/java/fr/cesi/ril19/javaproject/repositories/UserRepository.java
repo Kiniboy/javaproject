@@ -10,13 +10,13 @@ import java.util.List;
 
 @Repository
 public interface UserRepository extends CrudRepository<User, Long> {
-
-    /*List<Users> FindByName(String lastname);
+/*
+    List<User> FindByName(String lastname);
 
     @Query(value="SELECT * FROM Users " +
             "WHERE firstname " +
             "LIKE %:word% " +
             "OR lastname LIKE %:word%", nativeQuery = true)
-    List<Users> search(String word);*/
+    List<User> search(String word);*/
 
 }

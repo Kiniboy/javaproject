@@ -3,5 +3,6 @@ CREATE TABLE User (
     firstname VARCHAR(255),
     lastname VARCHAR(255),
     email VARCHAR(255),
-    tele VARCHAR(255)
-)
+    manager BOOLEAN,
+    tel VARCHAR(255)
+);

@@ -29,8 +29,8 @@ public class Project {
     private String Manager;
     @Column(name = "budget")
     private String budget;
-    @Column(name = "beginningDate")
-    private Timestamp beginningDate;
+    @Column(name = "StartDate")
+    private Timestamp StartDate;
     @Column(name = "workDays")
     private  int workDays;
 }

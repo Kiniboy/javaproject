@@ -18,14 +18,14 @@ public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name="trackingNumber")
-    private String trackingNumber;
-    @Column(name="hourlyCost")
-    private Integer hourlyCost;
+    @Column(name="num")
+    private String num;
+    @Column(name="hourCost")
+    private Integer hourCost;
     @Column(name="duration")
     private String duration;
-    @Column(name="idProjet")
-    private String idProjet;
+    @Column(name="Projet")
+    private Integer Projet;
 
 }
 

@@ -22,12 +22,14 @@ public class UserService {
     public List<User> getUser() {
         return (List<User>) this.usersRepo.findAll();
     }
-    public User findUserById(Long id) {
+    public User getUserById(Long id) {
         return this.usersRepo.findById(id).get();
     }
     public User saveUser(User u) {
+
         return this.usersRepo.save(u);
     }
     public void deleteUserById(@PathVariable Long id) {
-        this.usersRepo.deleteById(id);}
+        this.usersRepo.deleteById(id);
+    }
 }

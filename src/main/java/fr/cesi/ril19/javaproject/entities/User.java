@@ -9,7 +9,7 @@ import javax.persistence.*;
 
 
 @Entity
-@Table(name="users")
+@Table(name="USER")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,8 +19,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
-    @Column(name="fistname")
+    @Column(name="firstname")
     private String firstname;
     @Column(name="lastname")
     @JsonProperty("lastname")
@@ -29,4 +28,6 @@ public class User {
     private String email;
     @Column(name="tel")
     private String tel;
+    @Column(name="manager")
+    private Boolean manager;
 }

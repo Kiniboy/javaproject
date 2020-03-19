@@ -24,7 +24,7 @@ public class ProjectService {
     public Project saveProject (Project p) {
         return this.pr.save(p);
     }
-    public void deleProjectById(@PathVariable Long id) {
+    public void deleteProjectById(@PathVariable Long id) {
         this.pr.deleteById(id);
     }
 

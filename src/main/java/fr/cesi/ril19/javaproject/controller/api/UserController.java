@@ -1,6 +1,5 @@
 package fr.cesi.ril19.javaproject.controller.api;
 
-
 import fr.cesi.ril19.javaproject.entities.User;
 import fr.cesi.ril19.javaproject.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,13 +24,15 @@ public class UserController {
     // GET User
     @RequestMapping("")
     public List<User> getUser() {
+
         return this.usersService.getUser();
     }
 
     // GET User BY ID
-    @RequestMapping("/id")
-    public User getUserById(@PathVariable Long id) {
-        return null;
+    @RequestMapping("{/id}")
+    public User getUserById(@PathVariable("id") Long id) {
+
+        return this.usersService.getUserById(id);
     }
 
     //POST User
